@@ -16,6 +16,9 @@ function Posts() {
       </section>
       <aside>
         <p>
+          <Link to="/">Home</Link>
+        </p>
+        <p>
           <Link to={`/post/${nextPost.id}`}>{nextPost.title}</Link>
         </p>
         <p>Current location: {location.pathname}</p>

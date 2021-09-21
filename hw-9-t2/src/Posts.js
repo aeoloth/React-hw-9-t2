@@ -1,8 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 function Posts(props) {
+    const history = useHistory();
   return (
+      <div>
     <ul>
       {props.posts.map(post => (
         <li key={post.id}>
@@ -10,6 +12,8 @@ function Posts(props) {
         </li>
       ))}
     </ul>
+    <p>Visited pages: {history.length}</p>
+    </div>
   );
 }
 
